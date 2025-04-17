@@ -28,12 +28,16 @@
 
     /* line heights */
     --line-height-reg: 1.42vw;
+
+    /* font weights */
+    --f-weight-bold: 600;
+    --f-weight-thin: 400;
+    --f-weight-bolder:700;
 }
 
 .regular-btn {
     padding: 1vw 2vw;
     border: none;
-    background-color: transparent;
     color: var(--background-color);
     background-color: var(--primary-color);
     font-size: var(--fs-sm);
@@ -94,8 +98,8 @@
     flex-direction: column;
 }
 
-.active{
-    font-weight: 900;
+.active {
+    font-weight: 600;
 }
 
 
@@ -171,6 +175,10 @@ nav img {
     cursor: pointer;
 }
 
+#myLinks{
+    display: none;
+}
+
 .page-1 {
     height: auto;
     width: 100%;
@@ -180,6 +188,9 @@ nav img {
 }
 
 .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: auto;
     height: 100%;
     gap: 8vw;
@@ -189,21 +200,25 @@ nav img {
 .container-left h1 {
     font-size: var(--fs-heading-1);
     color: var(--font-natural-d-grey);
+    width: 90%;
+    font-weight: var(--f-weight-bold);
 }
 
 .container-left p {
     color: var(--font-natural-grey);
     padding: 1vw 0;
     font-size: var(--fs-base);
+    font-weight: var(--f-weight-thin);
 }
 
 .container-left button {
     margin-top: 1vw;
 }
 
+
 .container-right img {
     height: auto;
-    width: 100%;
+    width: 25vw;
 }
 
 .page-2 {
@@ -223,6 +238,7 @@ nav img {
     font-size: var(--fs-heading-2);
     color: var(--font-natural-d-grey);
     padding: 1vw 0;
+    font-weight: var(--f-weight-bold);
 }
 
 .page-2 p,
@@ -231,6 +247,7 @@ nav img {
     color: var(--font-natural-grey);
     padding-bottom: 1vw;
     line-height: var(--line-height-reg);
+    font-weight: var(--f-weight-thin);
 }
 
 .page-2-logos {
@@ -241,14 +258,18 @@ nav img {
     text-align: center;
     padding: 2vw var(--padding-y);
     gap: 0.3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .page-3-con-card {
     height: auto;
     width: 20vw;
     padding: 2vw;
-    box-shadow: 0px 15px 4px -15px #11111132;
-    border-radius: 2vw;
+    box-shadow: 9px 15px 10px -15px #11111132;
+    border-radius: .8vw;
 }
 
 .page-3-con-card>img {
@@ -260,13 +281,20 @@ nav img {
     font-size: var(--fs-heading-3);
     padding: .6vw 0;
     color: var(--font-natural-d-grey);
+    font-weight: var(--f-weight-bolder);
 }
 
 .page-3-con-card>p {
     font-size: 1vw;
     color: var(--font-natural-grey);
-    font-weight: 200;
+    font-weight: var(--f-weight-thin);
 
+}
+
+.page-4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-center;
 }
 
 .page-4,
@@ -297,6 +325,9 @@ nav img {
 .page-5 {
     background-color: var(--background-color);
     padding: 2vw var(--padding-y);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .stat-head>h1 {
@@ -311,7 +342,7 @@ nav img {
 
 .stats {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
     gap: 2vw;
 }
@@ -337,6 +368,7 @@ nav img {
 .stat h1 {
     font-size: var(--fs-heading-3);
     color: var(--font-natural-d-grey);
+    font-weight: var(--f-weight-bolder);
 }
 
 .stat p {
@@ -360,8 +392,7 @@ nav img {
     width: 7%;
 }
 
-.page-7 p,
-.page-8 p {
+.page-7 p {
     font-size: var(--fs-base);
     color: var(--font-natural-grey);
 }
@@ -369,6 +400,7 @@ nav img {
 .page-7 h3 {
     color: var(--primary-color);
     font-size: 1.3vw;
+    font-weight: var(--f-weight-bold);
 }
 
 .page-7-head {
@@ -387,9 +419,19 @@ nav img {
     line-height: var(--line-height-reg);
 }
 
+.page-8>p {
+    font-size: var(--fs-base);
+    color: var(--font-natural-grey);
+    width: 50%;
+    margin: 0 auto;
+}
+
 .page-8-container {
     text-align: center;
     padding: 3vw 0 8vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
 }
 
@@ -420,7 +462,7 @@ nav img {
 
 .page-8-container-caption h3 {
     font-size: var(--fs-base);
-    font-weight: 600;
+    font-weight: var(--f-weight-bold);
     color: var(--font-natural-grey);
     padding: .4vw 0;
 }
@@ -441,6 +483,7 @@ nav img {
 .page-9 h1 {
     font-size: var(--fs-heading-1);
     color: var(--font-natural-d-grey);
+    font-weight: var(--f-weight-bold);
 }
 
 .page-9 button {
@@ -471,7 +514,8 @@ footer {
     font-size: var(--fs-sm);
     padding: .2vw 0;
 }
-.company-info h1{
+
+.company-info h1 {
     font-size: var(--fs-heading-3);
     padding-left: .4vw;
 }
@@ -505,6 +549,7 @@ footer {
 
 .links-col h2 {
     font-size: var(--fs-base);
+    font-weight: var(--f-weight-bold);
 }
 
 .links-col a {
@@ -541,13 +586,7 @@ footer {
     color: #D9DBE1;
 }
 
-@media (min-width:320px) and (max-width:480px) {
-    #wrapper {
-        height: auto;
-        width: 100%;
-    }
-
-    nav {
-        display: block;
-    }
+.nav-mobile-i {
+    display: none;
 }
+

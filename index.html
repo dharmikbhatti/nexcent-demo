@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="./assets/images/Icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/desktop.css">
+    <link rel="stylesheet" href="./assets/css/mobile-view.css">
+    <link rel="shortcut icon" href="./assets/images/Icon.svg" type="image/x-icon    ">
     <script src="https://kit.fontawesome.com/eca0ebcee6.js" crossorigin="anonymous"></script>
     <title>Demo | Nexcent </title>
 </head>
@@ -14,7 +15,7 @@
 
     <div id="wrapper">
         <nav class="">
-            <div class="flex items-center">
+            <div class="flex items-center nav-logo">
                 <img src="./assets/images/Icon.svg" alt="">
                 <h1>Nexcent</h1>
             </div>
@@ -31,12 +32,23 @@
                 <button style="color: white; background-color: var(--primary-color); border-radius: .3vw;">Sign
                     up</button>
             </div>
+            <a href="javascript:void(0)" onclick="myFunction()" class="nav-mobile-i">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </nav>
+        <div id="topNav">
+            <div id="myLinks">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+
 
         <section class="page-1">
-            <div class="container flex items-center justify-center">
+            <div class="container">
                 <div class="container-left">
-                    <h1>Lessons and insights <br><span style="color: var(--primary-color);">from 8 years</span></h1>
+                    <h1>Lessons and insights <span style="color: var(--primary-color);">from 8 years</span></h1>
                     <p>Where to grow your business as a photographer: site or social media? </p>
                     <button class="regular-btn">Register</button>
                 </div>
@@ -59,7 +71,7 @@
             </div>
         </section>
 
-        <section class="page-3 h-auto w-full flex items-center justify-between flex-column">
+        <section class="page-3 h-auto w-full ">
             <h1>Manage your entire community <br> in a single system</h1>
             <p>Who is Nextcent suitable for?</p>
             <div class="page-3-container flex items-center justify-between w-full">
@@ -84,9 +96,9 @@
             </div>
         </section>
 
-        <section class="page-4 h-auto flex items-center justify-center w-full">
+        <section class="page-4 h-auto w-full">
             <img src="./assets/svg/page-4-img.svg" alt="">
-            <div class="w-50">
+            <div class="w-50 page-4-detail">
                 <h1>The unseen of spending three <br>years at Pixelgrade</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam
                     vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
@@ -96,7 +108,7 @@
             </div>
         </section>
 
-        <section class="page-5 w-full h-auto flex items-center justify-between">
+        <section class="page-5 w-full h-auto">
             <div class="stat-head">
                 <h1>Helping a local <br><span style="color: var(--primary-color);">business reinvent itself</span></h1>
                 <p>We reached here with our hard work and dedication</p>
@@ -135,7 +147,7 @@
 
         <section class="page-6 h-auto flex items-center justify-center w-full">
             <img src="./assets/svg/page-6-img.svg" alt="">
-            <div class="w-50">
+            <div class="w-50 page-6-detail">
                 <h1>How to design your site footer like we did</h1>
                 <p>Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa
                     nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In
@@ -173,10 +185,10 @@
 
         <section class="page-8 h-auto w-full">
             <h1>Caring is the new marketing</h1>
-            <p>The Nexcent blog is the best place to read about the latest membership insights, <br> trends and more.
-                See who's joining the community, read about how our community <br> are increasing their membership
+            <p>The Nexcent blog is the best place to read about the latest membership insights trends and more.
+                See who's joining the community, read about how our community are increasing their membership
                 income and lot's more.​</p>
-            <div class="page-8-container w-full flex items-center justify-around">
+            <div class="page-8-container w-full">
                 <div class="page-8-container-in">
                     <img src="./assets/images/page-8-img1.png" alt="">
                     <div class="page-8-container-caption">
@@ -250,6 +262,17 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 
 </body>
 
