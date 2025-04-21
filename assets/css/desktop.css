@@ -32,7 +32,7 @@
     /* font weights */
     --f-weight-bold: 600;
     --f-weight-thin: 400;
-    --f-weight-bolder:700;
+    --f-weight-bolder: 700;
 }
 
 .regular-btn {
@@ -175,7 +175,7 @@ nav img {
     cursor: pointer;
 }
 
-#myLinks{
+#myLinks {
     display: none;
 }
 
@@ -432,7 +432,6 @@ nav img {
     display: flex;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .page-8-container-in {
@@ -590,3 +589,44 @@ footer {
     display: none;
 }
 
+/* Base utility */
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+/* Medium (md) breakpoint: ≥768px */
+@media (min-width: 768px) {
+    .md\:hidden {
+        display: none !important;
+    }
+
+    .md\:visible {
+        display: block !important;
+    }
+}
+
+/* Small (sm) breakpoint: ≥576px */
+@media (min-width: 576px) {
+    .sm\:hidden {
+        display: none !important;
+    }
+
+    .sm\:visible {
+        display: block !important;
+    }
+}
+
+/* Large (lg) breakpoint: ≥992px */
+@media (min-width: 992px) {
+    .lg\:hidden {
+        display: none !important;
+    }
+
+    .lg\:visible {
+        display: block !important;
+    }
+}

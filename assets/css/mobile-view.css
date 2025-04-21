@@ -260,6 +260,7 @@
 
     .page-8-container {
         flex-direction: column;
+        width: 100%;
     }
 
     .page-8-container-caption h3 {
@@ -272,6 +273,10 @@
 
     .page-8-container-caption p {
         font-size: 3.7vw;
+    }
+
+    .page-8-container-in img {
+        width: 90%;
     }
 
     .page-9 {
@@ -338,4 +343,27 @@
         font-size: var(--mobile-sm-font);
     }
 
+    .email-share{
+        padding: 2vw 4vw;
+        border-radius: 2.6vw;
+    }
+    .links-col [type="email"]{
+        font-size: var(--mobile-sm-font);
+    }
+
+    .links-col i{
+        font-size: var(--mobile-sm-font);
+    }
+
+
+    .demo{
+        padding: 2vw var(--mobile-padding-y);
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        white-space: no-wrap;
+        overflow-y: scroll;
+        gap: 3vw;
+    }
 }
